@@ -1,0 +1,21 @@
+{
+  "name": "semantic-release-discord",
+  "version": "0.0.0",
+  "description": "semantic-release plugin to send notification to Discord",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fischervincent/semantic-release-discord.git"
+  },
+  "keywords": [
+    "semantic-release",
+    "discord"
+  ],
+  "author": "Vincent Fischer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fischervincent/semantic-release-discord/issues"
+  },
+  "homepage": "https://github.com/fischervincent/semantic-release-discord#readme"
+}
