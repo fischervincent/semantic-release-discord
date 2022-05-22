@@ -7,7 +7,7 @@ module.exports = async (pluginConfig, context) => {
     errors,
     env: { SEMANTIC_RELEASE_PACKAGE, npm_package_name },
   } = context
-  if (!pluginConfig.notifyOnFailure) {
+  if (!pluginConfig.notifyOnFail) {
     return
   }
 
