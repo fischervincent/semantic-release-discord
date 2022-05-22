@@ -12,7 +12,7 @@ module.exports = async (pluginConfig, context) => {
     env: { SEMANTIC_RELEASE_PACKAGE, npm_package_name },
   } = context
 
-  if (notifyOnSuccess) {
+  if (!notifyOnSuccess) {
     return
   }
 

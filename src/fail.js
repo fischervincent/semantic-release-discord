@@ -5,7 +5,7 @@ const postMessageToDiscord = require("./utils/post-message-to-discord")
 
 module.exports = async (pluginConfig, context) => {
   const { notifyOnFail } = getConfig(pluginConfig)
-  if (notifyOnFail) {
+  if (!notifyOnFail) {
     return
   }
 
