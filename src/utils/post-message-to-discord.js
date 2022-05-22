@@ -11,12 +11,13 @@ module.exports = async (message, discordWebhook) => {
       body: JSON.stringify(message),
     })
     const { status } = response
-    const responseContent = await response.json()
-    if (String(status).startsWith() !== 20)
+    if (String(status).startsWith() !== 20) {
+      const responseContent = await response.json()
       throw new SemanticReleaseError(
         responseContent.message,
         "DISCORD CALL FAILED"
       )
+    }
   } catch (error) {
     throw new SemanticReleaseError(error.message, "DISCORD CALL FAILED")
   }
