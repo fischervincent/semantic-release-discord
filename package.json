@@ -1,9 +1,23 @@
 {
   "name": "semantic-release-discord",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "semantic-release plugin to send notification to Discord",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "src/index.js",
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "lint": "eslint src",
+    "prettier": "prettier --write --list-different '**/*.@(md|js?(on))'"
+  },
+  "dependencies": {
+    "@semantic-release/error": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "semantic-release": "^19.0.2"
+  },
+  "peerDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fischervincent/semantic-release-discord.git"
