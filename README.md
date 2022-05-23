@@ -1,4 +1,4 @@
-# semantic-release-discord-bot
+# semantic-release-discord
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to get release notifications on [discord](https://discord.com) using discord webhook
 
