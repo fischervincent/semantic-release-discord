@@ -26,7 +26,7 @@ This plugin has to be configured in the [**semantic-release** configuration file
       {
         "notifyOnSuccess": true,
         "notifyOnFail": true,
-        "discordWeebhook": "https://my.webhook.com"
+        "discordWebhook": "https://my.webhook.com"
       }
     ]
   ]
