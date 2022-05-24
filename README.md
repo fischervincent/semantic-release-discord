@@ -40,7 +40,7 @@ This plugin has to be configured in the [**semantic-release** configuration file
 | `notifyOnSuccess`    | Determines if a successful release should trigger a discord message to be sent. If `false` this plugin does nothing on success.  | true                                                           |
 | `notifyOnFail`       | Determines if a failed release should trigger a discord message to be sent. If `false` this plugin does nothing on fail.         | true                                                           |
 | `onSuccessTemplate`  | Provides a template for the Discord message object on success when `notifyOnSuccess` is `true`. See [templating](#templating).   | undefined                                                      |
-| `discordWeebhook`    | Discord web hook url.                                                                                                            | value of the environment variable matching `discordWebhookVar` |
+| `discordWebhook`     | Discord web hook url.                                                                                                            | value of the environment variable matching `discordWebhookVar` |
 | `discordWebhookVar`  | This decides what the environment variable for exporting the discord webhook value.                                              | DISCORD_WEBHOOK                                                |
 
 ## Templating
