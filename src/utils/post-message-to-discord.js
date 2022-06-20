@@ -1,3 +1,4 @@
+const { WebhookClient } = require('discord.js');
 const SemanticReleaseError = require("@semantic-release/error")
 
 module.exports = async (message, { discordWebhookId, discordWebhookToken }) => {
