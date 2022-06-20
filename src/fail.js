@@ -14,11 +14,11 @@ module.exports = async (pluginConfig, context) => {
     env: { SEMANTIC_RELEASE_PACKAGE, npm_package_name },
   } = context
 
-  const { discordWebhook } = getDiscordVars(pluginConfig)
+  const { discordWebhookId, discordWebhookToken } = getDiscordVars(pluginConfig)
 
   const package_name = SEMANTIC_RELEASE_PACKAGE || npm_package_name
 
   const discordMessage = buildDiscordErrorMessage(package_name, errors)
 
-  await postMessageToDiscord(discordMessage, discordWebhook)
+  await postMessageToDiscord(discordMessage, { discordWebhookId, discordWebhookToken })
 }

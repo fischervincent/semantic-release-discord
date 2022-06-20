@@ -1,23 +1,9 @@
 const SemanticReleaseError = require("@semantic-release/error")
-const fetch = require("node-fetch")
 
-module.exports = async (message, discordWebhook) => {
+module.exports = async (message, { discordWebhookId, discordWebhookToken }) => {
   try {
-    const response = await fetch(discordWebhook, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-      body: JSON.stringify(message),
-    })
-    const { status } = response
-    if (!String(status).startsWith('20')) {
-      const responseContent = await response.json()
-      throw new SemanticReleaseError(
-        responseContent.message,
-        "DISCORD CALL FAILED"
-      )
-    }
+    const webhookClient = new WebhookClient(`${discordWebhookId}/${discordWebhookToken}`);
+    await webhookClient.send(message)    
   } catch (error) {
     throw new SemanticReleaseError(error.message, "DISCORD CALL FAILED")
   }

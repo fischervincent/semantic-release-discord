@@ -26,7 +26,8 @@ This plugin has to be configured in the [**semantic-release** configuration file
       {
         "notifyOnSuccess": true,
         "notifyOnFail": true,
-        "discordWebhook": "https://my.webhook.com"
+        "discordWebhookId": "000000000000000000",
+        "discordWebhookToken": "my-token"
       }
     ]
   ]
@@ -35,13 +36,15 @@ This plugin has to be configured in the [**semantic-release** configuration file
 
 ## Options
 
-| Option               | Description                                                                                                                      | Default                                                        |
-| :------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `notifyOnSuccess`    | Determines if a successful release should trigger a discord message to be sent. If `false` this plugin does nothing on success.  | true                                                           |
-| `notifyOnFail`       | Determines if a failed release should trigger a discord message to be sent. If `false` this plugin does nothing on fail.         | true                                                           |
-| `onSuccessTemplate`  | Provides a template for the Discord message object on success when `notifyOnSuccess` is `true`. See [templating](#templating).   | undefined                                                      |
-| `discordWebhook`     | Discord web hook url.                                                                                                            | value of the environment variable matching `discordWebhookVar` |
-| `discordWebhookVar`  | This decides what the environment variable for exporting the discord webhook value.                                              | DISCORD_WEBHOOK                                                |
+| Option                   | Description                                                                                                                      | Default                                                             |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| `notifyOnSuccess`        | Determines if a successful release should trigger a discord message to be sent. If `false` this plugin does nothing on success.  | true                                                                |
+| `notifyOnFail`           | Determines if a failed release should trigger a discord message to be sent. If `false` this plugin does nothing on fail.         | true                                                                |
+| `onSuccessTemplate`      | Provides a template for the Discord message object on success when `notifyOnSuccess` is `true`. See [templating](#templating).   | undefined                                                           |
+| `discordWebhookId`       | Discord web hook id.                                                                                                             | value of the environment variable matching `discordWebhookIdVar`    |
+| `discordWebhookIdVar`    | This decides what the environment variable for exporting the discord webhook id value.                                           | DISCORD_WEBHOOK_ID                                                  |
+| `discordWebhookToken`    | Discord web hook token.                                                                                                          | value of the environment variable matching `discordWebhookTokenVar` |
+| `discordWebhookTokenVar` | This decides what the environment variable for exporting the discord webhook token value.                                        | DISCORD_WEBHOOK_TOKEN                                               |
 
 ## Templating
 

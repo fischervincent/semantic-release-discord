@@ -1,10 +1,14 @@
 module.exports = (config) => {
   const {
-    discordWebhookVar = "DISCORD_WEBHOOK",
-    discordWebhook = process.env[discordWebhookVar],
+    discordWebhookIdVar = "DISCORD_WEBHOOK_ID",
+    discordWebhookId = process.env[discordWebhookIdVar],
+    discordWebhookTokenVar = "DISCORD_WEBHOOK_TOKEN",
+    discordWebhookToken = process.env[discordWebhookTokenVar],
   } = config
   return {
-    discordWebhookVar,
-    discordWebhook,
+    discordWebhookIdVar,
+    discordWebhookId,
+    discordWebhookTokenVar,
+    discordWebhookToken,
   }
 }

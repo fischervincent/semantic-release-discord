@@ -9,9 +9,9 @@ module.exports = async (pluginConfig, context) => {
     return
   }
 
-  const { discordWebhook } = getDiscordVars(pluginConfig)
+  const { discordWebhookId, discordWebhookToken } = getDiscordVars(pluginConfig)
 
   const discordMessage = buildDiscordSuccessMessage(context, onSuccessTemplate);
 
-  await postMessageToDiscord(discordMessage, discordWebhook)
+  await postMessageToDiscord(discordMessage, { discordWebhookId, discordWebhookToken })
 }
