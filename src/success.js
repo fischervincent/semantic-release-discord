@@ -1,7 +1,7 @@
 const getDiscordVars = require("./utils/get-discord-vars")
 const getConfig = require("./utils/get-config")
 const postMessageToDiscord = require("./utils/post-message-to-discord")
-const buildDiscordSuccessMessage = require("./utils/build-discord-success-message")
+const buildDiscordSuccessMessages = require("./utils/build-discord-success-messages")
 
 module.exports = async (pluginConfig, context) => {
   const { notifyOnSuccess, onSuccessTemplate } = getConfig(pluginConfig)
@@ -11,7 +11,7 @@ module.exports = async (pluginConfig, context) => {
 
   const { discordWebhookId, discordWebhookToken } = getDiscordVars(pluginConfig)
 
-  const discordMessage = buildDiscordSuccessMessage(context, onSuccessTemplate);
+  const discordMessages = buildDiscordSuccessMessages(context, onSuccessTemplate);
 
-  await postMessageToDiscord(discordMessage, { discordWebhookId, discordWebhookToken })
+  await postMessageToDiscord(discordMessages, { discordWebhookId, discordWebhookToken })
 }
