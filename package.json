@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-discord",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "semantic-release plugin to send notification to Discord",
   "main": "src/index.js",
   "scripts": {
