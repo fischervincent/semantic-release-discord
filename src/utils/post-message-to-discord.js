@@ -8,6 +8,7 @@ module.exports = async (message, { discordWebhookId, discordWebhookToken }) => {
     for (const message of messages) {
       await webhookClient.send(message);
     }
+    webhookClient.destroy()
   } catch (error) {
     throw new SemanticReleaseError(error.message, "DISCORD CALL FAILED")
   }
