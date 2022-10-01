@@ -48,7 +48,7 @@ This plugin has to be configured in the [**semantic-release** configuration file
 
 ## Templating
 
-This template will be used for the respective Discord message. The template should be an object that follows the [Discord API message structure](https://api.Discord.com/docs/message-formatting). Strings within the template will have keywords replaced:
+This template will be used for the respective Discord message. The template should be an object that follows the [Discord webhook Form Params](https://discord.com/developers/docs/resources/webhook#execute-webhook). Strings within the template will have keywords replaced:
 
 | Keyword                | Description                 | Example                                           |
 | ---------------------- | --------------------------- | ------------------------------------------------- |
@@ -62,8 +62,8 @@ A sample configuration with template can look like this
 
 ```json
 "onSuccessTemplate": {
-  "username": "$package_name",
   "content": "A new version of $package_name as been released !",
+  "username": "$package_name",
   "embeds": [
     {
       "title": "$package_name $npm_package_version",
