@@ -4,7 +4,7 @@ const SemanticReleaseError = require("@semantic-release/error")
 module.exports = async (message, { discordWebhookId, discordWebhookToken }) => {
   const messages = Array.isArray(message) ? message : [message]
   try {
-    const webhookClient = new WebhookClient(`${discordWebhookId}/${discordWebhookToken}`);
+    const webhookClient = new WebhookClient({ id: discordWebhookId, token: discordWebhookToken });
     for (const message of messages) {
       await webhookClient.send(message);
     }

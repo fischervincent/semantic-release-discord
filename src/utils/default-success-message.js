@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 const COLORS = require("./colors")
 
@@ -11,7 +11,7 @@ const removeFirstLine = (text) => {
 }
 
 module.exports = (packageName, nextRelease) => {
-  const embed = new MessageEmbed()
+  const embed = new EmbedBuilder()
     .setColor(COLORS.BLUE)
     .setTitle(`${packageName} v${nextRelease.version}`)
     .setDescription(`${removeDoubleNewLines(
